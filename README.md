@@ -9,16 +9,23 @@ This project simulates the spread of a forest fire on a grid using using React, 
 2. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/forest-fire-simulation.git
+git clone https://github.com/souleymane-diallo/forestFireSimulation.git
+```
 
-Navigate to the project directory:
-cd test_technique_cirilgroup
+1. Navigate to the project directory:
+```bash
+cd forestFireSimulation
+```
 
-nstall project dependencies:
+2. Install project dependencies:
+```bash
 npm install
+```
 
-Launch the application in development mode:
+3. Launch the application in development mode:
+```bash
 npm run dev
+```
 
 This will start the development server, and you can access the simulation at 
 http://localhost:5173/
