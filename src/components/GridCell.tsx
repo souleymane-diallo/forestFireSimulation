@@ -9,7 +9,7 @@ export default function GridCell({ state }: GridCellProps) {
 
   return (
     <motion.div 
-      className={`h-10 w-10 
+      className={`h-8 w-8 
       ${state === FireState.On ? 'bg-red-600' : 
       state === FireState.Intact ? 'bg-green-600' : 
       'bg-gray-600'}`}

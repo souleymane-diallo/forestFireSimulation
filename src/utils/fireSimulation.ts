@@ -14,13 +14,12 @@ export function makeGrid(width: number, height: number): FireState[][] {
   return grid;
 }
 
-// Fonction pour initialiser la grille en allumant une case au hasard en feu (on)
 export function initializeGrid(grid: FireState[][], initFire: initFireType[]): FireState[][] {
-  // Copie profonde de la grille
   const gridCopy: FireState[][] = grid.map(row => [...row]); 
   const row = initFire[0].initialRow;
   const cell = initFire[0].initialCell;
   gridCopy[row][cell] = FireState.On;
+
   return gridCopy;
 }
 
@@ -32,14 +31,14 @@ export function propagationFire(grid: FireState[][], configData: configDataType)
       if (cell === FireState.On) {
         newGrid[x][y] = FireState.Off;
 
-        // Les 4 directions possibles (haut, bas, gauche, droite)
+        // The four possible directions (up, down, left, right).
         const directions = [[0, -1], [0, 1], [-1, 0], [1, 0]];
 
         directions.forEach(([dx, dy]) => {
           const newX = x + dx;
           const newY = y + dy;
 
-          // Vérifier si la nouvelle position est dans la grille
+          // Check if the new position is within the grid.
           if (
             newX >= 0 &&
             newX < configData.grid.width &&

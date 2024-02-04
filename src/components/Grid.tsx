@@ -37,6 +37,7 @@ export default function Grid({ mappedData }: GridProps) {
 
   useEffect(() => {
     initializeGridState(); 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
