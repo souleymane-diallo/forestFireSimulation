@@ -15,7 +15,7 @@ export type configDataType = {
 }
 
 export enum FireState {
-  Intact = 'unburned',
-  On = 'burning',
-  Off = 'burned',
+  Intact = "unburned",
+  On = "burning",
+  Off = "burned",
 }

@@ -16,9 +16,12 @@ export function makeGrid(width: number, height: number): FireState[][] {
 
 export function initializeGrid(grid: FireState[][], initFire: initFireType[]): FireState[][] {
   const gridCopy: FireState[][] = grid.map(row => [...row]); 
-  const row = initFire[0].initialRow;
-  const cell = initFire[0].initialCell;
-  gridCopy[row][cell] = FireState.On;
+  
+  for(let i = 0; i < initFire.length; i++) {
+    const row = initFire[i].initialRow;
+    const cell = initFire[i].initialCell
+    gridCopy[row][cell] = FireState.On;
+  }
 
   return gridCopy;
 }

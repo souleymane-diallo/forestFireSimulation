@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import Swal from "sweetalert2";
 import { configDataType, FireState } from "../types/types";
 import { makeGrid, initializeGrid, executeSimulation} from "../utils/fireSimulation";
 import Cell from "./GridCell";
@@ -30,7 +31,12 @@ export default function Grid({ mappedData }: GridProps) {
       if (newGrid) {
         setGridState(newGrid);
       } else {
-        alert("Simulation terminée. Aucun arbre n'est en feu");
+        Swal.fire({
+          title: "Information",
+          text: "Simulation terminée. Aucun arbre n'est en feu!",
+          icon: "info",
+          confirmButtonText: "OK"
+        });
       }
     }
   }
