@@ -1,30 +1,24 @@
-# React + TypeScript + Vite
+# Forest Fire Simulation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project simulates the spread of a forest fire on a grid using using React, TypeScript, Vite, Tailwind CSS, and Framer Motion for animations.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-## Expanding the ESLint configuration
+2. Clone the repository to your local machine:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+```bash
+git clone https://github.com/your-username/forest-fire-simulation.git
 
-- Configure the top-level `parserOptions` property like this:
+Navigate to the project directory:
+cd test_technique_cirilgroup
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+nstall project dependencies:
+npm install
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Launch the application in development mode:
+npm run dev
+
+This will start the development server, and you can access the simulation at 
+http://localhost:5173/
